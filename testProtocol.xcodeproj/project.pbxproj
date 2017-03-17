@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		012B4A3E1E7C3471006D3083 /* MinionModeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012B4A3D1E7C3471006D3083 /* MinionModeViewModel.swift */; };
 		8A7BAC861E70DF610006A63F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7BAC851E70DF610006A63F /* AppDelegate.swift */; };
 		8A7BAC881E70DF610006A63F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7BAC871E70DF610006A63F /* ViewController.swift */; };
 		8A7BAC8B1E70DF610006A63F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A7BAC891E70DF610006A63F /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		012B4A3D1E7C3471006D3083 /* MinionModeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinionModeViewModel.swift; sourceTree = "<group>"; };
 		8A7BAC821E70DF610006A63F /* testProtocol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testProtocol.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A7BAC851E70DF610006A63F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A7BAC871E70DF610006A63F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,8 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				8A7BAC851E70DF610006A63F /* AppDelegate.swift */,
-				8A7BAC871E70DF610006A63F /* ViewController.swift */,
+				012B4A3D1E7C3471006D3083 /* MinionModeViewModel.swift */,
 				8A7BAC971E70E12D0006A63F /* SwitchWithTextTableViewCell.swift */,
+				8A7BAC871E70DF610006A63F /* ViewController.swift */,
 				8A7BAC891E70DF610006A63F /* Main.storyboard */,
 				8A7BAC8C1E70DF610006A63F /* Assets.xcassets */,
 				8A7BAC8E1E70DF610006A63F /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 				8A7BAC881E70DF610006A63F /* ViewController.swift in Sources */,
 				8A7BAC981E70E12D0006A63F /* SwitchWithTextTableViewCell.swift in Sources */,
 				8A7BAC861E70DF610006A63F /* AppDelegate.swift in Sources */,
+				012B4A3E1E7C3471006D3083 /* MinionModeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +308,7 @@
 				8A7BAC961E70DF610006A63F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

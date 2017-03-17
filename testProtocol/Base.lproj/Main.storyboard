@@ -47,8 +47,8 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="switchh" destination="CeE-PJ-4Ez" id="3fT-In-b1Y"/>
-                                            <outlet property="title" destination="xtG-Lj-jE9" id="sIm-ZY-rTi"/>
+                                            <outlet property="switchh" destination="CeE-PJ-4Ez" id="dWO-Nz-kba"/>
+                                            <outlet property="title" destination="xtG-Lj-jE9" id="hxd-I9-AZm"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

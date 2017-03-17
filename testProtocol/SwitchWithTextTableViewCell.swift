@@ -4,72 +4,53 @@
 //
 //  Created by dev_sinu on 2017. 3. 9..
 //  Copyright © 2017년 com.example. All rights reserved.
-//
+//  https://www.natashatherobot.com/swift-protocol-composition/
 
 import UIKit
 
-protocol SwitchwithTextCellDataSource {
-    var title: String { get }
-    var switchOn: Bool { get }
-}
-
-protocol SwitchWithTextCellDelegate {
-    func onSwitchToggleOn(on: Bool)
-    
-    var switchColor: UIColor { get }
+protocol TextPresentable {
+    var text: String { get }
     var textColor: UIColor { get }
     var font: UIFont { get }
 }
 
-struct MinionModelViewModel: SwitchwithTextCellDataSource {
-    var title: String = " wow! good protocol!"
-    var switchOn: Bool = false
+protocol SwitchPresentable {
+    var switchOn: Bool { get }
+    var switchColor: UIColor { get }
+    
+    func onSwitchToggleOn(on: Bool)
 }
 
-extension MinionModelViewModel: SwitchWithTextCellDelegate {
-    var font: UIFont {
-        return .systemFont(ofSize: 15)
-    }
+protocol ImagePresentable {
+    var imageName: String { get }
+}
 
+protocol TextFieldPresentable {
+    var placeholder: String { get }
+    var text: String { get }
+    
+    func onTextFieldDidEndEditing(textField: UITextField)
+}
+
+extension TextPresentable {
     var textColor: UIColor {
-        return .red
-    }
-
-    var switchColor: UIColor {
-        return .purple
+        return .black
     }
     
-    func onSwitchToggleOn(on: Bool) {
-        if on {
-            print("the monions are here to stay!")
-        } else {
-            print("the minions went out to play!")
-        }
+    var font: UIFont {
+        return .systemFont(ofSize: 17)
     }
 }
+
+typealias SwitchWithTextViewPresentable = TextPresentable & SwitchPresentable & ImagePresentable
 
 class SwitchWithTextTableViewCell: UITableViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var switchh: UISwitch!
+
+    func configure(presenter: SwitchWithTextViewPresentable) {
     
-    func configure(withDataSource dataSource: SwitchwithTextCellDataSource, delegate: SwitchWithTextCellDelegate?) {
-        title.text = dataSource.title
-        title.font = delegate?.font
-        title.textColor = delegate?.textColor
-
-        switchh.isOn = dataSource.switchOn
-        switchh.onTintColor = delegate?.switchColor
+        title.text = presenter.text
+        switchh.isOn = presenter.switchOn
     }
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }

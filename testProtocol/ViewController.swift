@@ -27,19 +27,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        let viewModel = MinionModeViewModel.init(text: "hihi")
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "SwitchWithTextTableViewCell", for: indexPath) as! SwitchWithTextTableViewCell
-        
-        if indexPath.row == 0 {
-            let viewModel = MinionModelViewModel()
-            cell.configure(withDataSource: viewModel, delegate: viewModel)
-        } else {
-            var viewModel = MinionModelViewModel()
-            viewModel.title = "hihihi"
-            viewModel.switchOn = true
-            cell.configure(withDataSource: viewModel, delegate: viewModel)
-        }
-        
+
+        cell.configure(presenter: viewModel)
         
         return cell
     }
