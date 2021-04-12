@@ -35,7 +35,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             cell.configure(withDataSource: viewModel, delegate: viewModel)
         } else {
             var viewModel = MinionModelViewModel()
-            viewModel.title = "hihihi"
+            viewModel.title = "hihihi2222"
             viewModel.switchOn = true
             cell.configure(withDataSource: viewModel, delegate: viewModel)
         }
